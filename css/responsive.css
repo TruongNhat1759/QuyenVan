@@ -1,0 +1,210 @@
+/**************** Css is specific to each browser *****************/
+/**************** CSS Only IE *****************/
+@media screen\0 {
+  .selector {}
+}
+
+/**************** CSS Only FireFox *****************/
+@supports (-moz-appearance:none) {
+  .selector {}
+}
+
+/**************** CSS Only Edge *****************/
+@supports (-ms-ime-align:auto) {
+  .selector {}
+}
+
+@media only screen and (max-width: 1236px) {
+  .screen02 {
+    background: url('../images/sc02_star_blue.svg') bottom left no-repeat, url('../images/sc02_star_yellow.svg') top right no-repeat;
+    background-size: 94px auto, 87px auto;
+    padding-bottom: 8rem;
+  }
+
+  .screen02-box {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .screen02-box li:first-child a {
+    padding: 2rem 1.5rem;
+  }
+
+  .screen02-box li a {
+    background: rgba(255, 255, 255, 0.2) url('../images/ic_arr.svg') bottom 1rem right 1rem no-repeat;
+    background-size: 18px auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .screen02-box {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding-top: 82px;
+  }
+
+  #content {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+    min-height: calc(100vh - 82px);
+    padding: 2rem 1rem;
+  }
+
+  #content.active {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #content .bg-openmenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 240, 255, 1);
+    opacity: 0.2;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #content.active .bg-openmenu {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .toggle-menu {
+    width: 55px;
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+
+  .toggle-menu.active img {
+    padding-right: 4px;
+  }
+
+  #header {
+    background: #1d1d45;
+    height: 82px;
+  }
+
+  #header .container {
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .h-left h1 a {
+    width: 50px;
+  }
+
+  .h-right a {
+    padding: 0.6rem 1.4rem;
+  }
+
+  .h-right .h-setting {
+    margin-right: 1rem;
+    width: 20px;
+  }
+
+  #navigation {
+    width: 230px;
+    padding: 0.5rem 0;
+    background: #1d1d45;
+    top: 82px;
+    height: calc(100% - 82px);
+  }
+
+  #navigation.active {
+    width: 0;
+    border-right: 0;
+    opacity: 0;
+  }
+
+
+
+  #navigation>ul li a {
+    width: 230px;
+    padding: 0.75rem 0;
+    font-size: 16px;
+  }
+
+  #navigation>ul li span {
+    width: 26px;
+    height: 26px;
+    margin: 0 0.75rem;
+  }
+
+  #navigation>ul li span img {
+    width: 18px;
+  }
+
+  #navigation.active .nav-bottom {
+    border-top: 0;
+  }
+
+  #navigation.active .nav-setting {
+    display: none;
+    opacity: 0;
+  }
+
+  .nav-bottom {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .nav-bottom .price {
+    font-size: 18px;
+  }
+
+  .nav-bottom .price span {
+    width: 20px;
+  }
+
+  .nav-bottom .social {
+    margin-top: 1rem;
+  }
+
+  .nav-bottom .social .language span {
+    width: 20px;
+  }
+
+  .nav-bottom .social>div {
+    margin-left: 2rem;
+  }
+
+  .nav-bottom .social>div p:first-child {
+    width: 20px;
+  }
+
+  .nav-bottom .social>div p:last-child {
+    width: 22px;
+  }
+
+  /* ------ screen02 ------- */
+  .screen02 {
+    background: url('../images/sc02_star_blue.svg') bottom left no-repeat, url('../images/sc02_star_yellow.svg') top right no-repeat;
+    background-size: 60px auto, 55px auto;
+    padding-bottom: 0;
+  }
+
+  .screen02 h3 {
+    font-size: 22px;
+    line-height: 2.5rem;
+  }
+
+  .screen02 h3 span {
+    font-size: 36px;
+  }
+
+  .screen02 .des {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+}
