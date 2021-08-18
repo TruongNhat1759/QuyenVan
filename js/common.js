@@ -23,14 +23,25 @@ $(function() {
 		handleScroll: function() {
 			let curScroll = 0;
 			$(window).bind('load resize scroll', () => {
-				if ($(window).scrollTop() > curScroll ) {
-					$('#header').css({
-						'top': -$('#header').outerHeight()
-					})
-					$('#navigation').css({
-						'height': '100%',
-						'top': '0'
-					});
+				if ($(window).scrollTop() >= 0) {
+					if ($(window).scrollTop() > curScroll ) {
+						$('#header').css({
+							'top': -$('#header').outerHeight()
+						})
+						$('#navigation').css({
+							'height': '100%',
+							'top': '0'
+						});
+					} else {
+						$('#header').css({
+							'top': ''
+						})
+						$('#navigation').css({
+							'height': '',
+							'top': ''
+						});
+					}
+					curScroll = $(window).scrollTop();
 				} else {
 					$('#header').css({
 						'top': ''
@@ -40,9 +51,8 @@ $(function() {
 						'top': ''
 					});
 				}
-				curScroll = $(window).scrollTop();
 			})
-		}
+		},
   };
   objectFunction.init();
 });
